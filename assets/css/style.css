@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.blink{
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker{
+    50%{
+        opacity: 0;
+    }
+}
+
+body{
+    background-color: rgb(193, 255, 255);
+}
+/* NAVBAR */
+.navbar-list{
+    background: rgb(0, 183, 255);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 17px 0;
+}
+
+.navbar-item{
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.toggle{
+    list-style-type: none;
+    display: none;
+    margin: 0 20px;
+}
+
+.navbar-link{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-link:hover{
+    color: black;
+}
+
+.logo{
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    list-style-type: none;
+    margin-right: auto;
+    padding-left: 40px;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.navbar-button{
+    font-size: 1em;
+    background: #2081E2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+}
+
+.navbar-button:hover{
+    background-color: blue;
+}
+
+@media screen and (max-width:768px) {
+
+.navbar-list{
+    flex-wrap: wrap;
+}
+
+    .toggle{
+        display: block;
+    }
+
+    .navbar-item{
+        display: none;
+        text-align: right;
+        margin-right: 50px;
+        margin: 20px;
+        width: 100%;
+    }
+
+    .navbar-button{
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .active{
+        display: block;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .logo{
+        font-size: 1.8em;
+    }
+}
+
+/* TITLE */
+.title{
+    padding: 50px 50px;
+}
+
+.title-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.character{
+    flex: 1;
+    text-align: center;
+    margin: auto;
+}
+ 
+.character-img{
+    width: 500px;
+    justify-content: center;
+    transition: 3.0s;
+}
+
+.character-img:hover{
+    border-radius: 100%;
+}
+
+.big-heading{
+    flex: 1;
+    margin-left: 30px;
+    margin-inline-end: auto;
+}
+
+.big-heading h1{
+    font-size: 3em;
+    margin-top: 300px;
+    font-weight: 700;
+    margin-bottom: 200px;
+    color: black;
+}
+
+.big-heading p{
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.explore-button{
+    background-color: #6aadff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 20px 50px;
+}
+
+.explore-button a{
+    text-decoration: none;
+    color: white;
+}
+
+.explore-button:hover{
+    color: rgb(151, 151, 255);
+    background-color: rgb(111, 0, 255);
+}
+
+@media screen and (max-width: 1024px) {
+        .big-heading {
+             margin-left: 30px;
+    }
+}
+ 
+ @media screen and (max-width: 912px) {
+     .title-container {
+        flex-direction: column; 
+    } 
+        
+     .big-heading{
+        margin: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .character{
+        margin: 40px;
+    }
+
+    .character-img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .character{
+        display: flex;
+        margin: auto;
+    }
+    .character-img{
+        width: 250px;
+    }
+
+    .big-heading h1{
+        margin-top: -10px;
+        padding-top: -10px;
+    }
+
+    .big-heading p{
+        margin-top: -50px;
+        padding-top: -50px;
+    }
+
+
+
+    
+}
+
+
+
+/* collection */
+.collection{
+    margin-top: 25px;
+    background-color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.collection h2{
+    color: black;
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+.collection-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.collection-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+}
+
+.collection-card:hover{
+    box-shadow: 0 0 15px rgb(41, 0, 85);
+}
+
+.image-box{
+    width: 310px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-box img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.image-box:hover img{
+    transform: scale(1.2);
+}
+
+.collection-card h3{
+    color: black;
+    font-weight: bold;
+    margin: 5px 0 10px 0px;
+    text-align: center;
+}
+
+.spesies{
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.tipe{
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    margin: 10px 10px 0;
+    text-align: center;
+}
+
+.card-button{
+    background: #2081E2;
+    padding: 15px 80px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 10px 20px 20px;
+    border: 0;
+}
+
+.card-button:hover{
+    background: rgb(0, 136, 136);
+    box-shadow: 15px grey;
+}
+
+@media screen and (max-width: 425px) {
+    .collection-card{
+        width: 70%;
+    }
+
+    .image-box{
+        width: 100%;
+        height: 250px;               
+    }
+
+    .card-button{
+        padding: 8px 15px;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .collection-card{
+        width: 100%;
+    }
+
+    .image-box{
+        width: 80%;
+        height: 220px;
+    }
+
+    .card-button{
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .collection-card{
+        width: 80%;
+    }
+
+    .image-box{
+        width: 100%;
+    }
+    .character{
+        margin-top: 10px;
+    }
+
+    .character-img{
+        width: 100%;
+    }
+    
+    .big-heading h1{
+        font-size: 1.9em;
+    }
+
+    .big-heading p{
+        font-size: 1em;
+    }
+
+    .explore-button{
+        padding: 10px 20px;
+        font-size: small;
+    }
+}
+
+/* ASIDE */
+aside{
+    background: #00bfff;
+    justify-content: center;
+    display: flex;
+}
+
+.biography-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px gray;
+}
+
+.biography-card:hover{
+    box-shadow: 0 0 15px gray;
+}
+
+.profile-im g{
+    border-radius: 10px 10px 0 0;
+}
+
+.biography-card h3{
+    color: black;
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+.contact{
+    margin: 20px 10px;
+}
+
+.social-media{
+    padding: 0 10px;
+}
+
+/* FOOTER */
+footer{
+    background: rgb(0, 145, 255);
+    text-align: center;
+    padding: 30px 0;
+}
